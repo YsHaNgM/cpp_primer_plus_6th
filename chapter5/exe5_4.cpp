@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 int main()
@@ -7,12 +8,12 @@ int main()
   const double C_interest=0.05;
   double Daphne_all=100;
   double Cleo_all=100;
-  int year=0;
+  int year=1;
   
   while(Daphne_all>=Cleo_all)
   {
-    Daphne_all+=100*S_interest;
-    Cleo_all+=Cleo_all*C_interest;
+    Daphne_all=100*(1+S_interest*year);
+    Cleo_all=100*pow((1+C_interest),n);
     year++;
   }
 
